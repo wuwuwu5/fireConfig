@@ -1,0 +1,68 @@
+logging:
+  level:
+    cn.turing.firecontrol: DEBUG
+
+server:
+  port: 2345
+
+spring:
+  application:
+    name: turing-datahandler
+  datasource:
+    url: jdbc:mysql://47.96.118.225:3306/turing-datahandler?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    druid:
+      stat-view-servlet:
+        loginUsername: root
+        loginPassword: 123456
+  elasticsearch: #ES中系统变量 # Elasticsearch 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
+    cluster-name: my-application
+    cluster-nodes: 127.0.0.1:9601,127.0.0.1:9602,127.0.0.1:9603
+    pool-size: 5
+    rest:
+      username: esuser
+      password: Itat@pros
+      uris:
+        - http://47.96.118.225:9200  
+# 配置数据库
+mybatis:
+  basepackage: cn.turing.firecontrol.datahandler.mapper
+  xmlLocation: classpath:mapper/**/*.xml
+  mapper-locations: "classpath*:mapper/*.xml"
+  configuration:
+    cache-enabled: false
+mapper:
+  mappers: cn.turing.firecontrol.common.mapper.CommonMapper
+# 配置swagger
+swagger:
+  enabled: true
+  base-package: cn.turing.firecontrol.datahandler
+  title: 消防大数据
+  version: 1.0.0.SNAPSHOT
+  description: 数据处理管理服务
+  contact:
+    name: 武汉中科图灵科技有限公司
+  global-operation-parameters[0]:
+    name: Authorization
+    description: 12
+    modelRef: string
+    parameterType: header
+    required: false
+
+#配置用户认证和服务认证信息
+auth:
+  serviceId: turing-auth
+  user:
+    token-header: Authorization
+    limit-expire: 1440 # 一天过去,单位分钟
+  client:
+    id: turing-datahandler
+    secret: 123456
+    token-header: client-token
+
+
+#自行配置激光推送
+jpush:
+  appKey:
+  masterSecret:
+  liveTime: 300000
+  title: 消防平台
