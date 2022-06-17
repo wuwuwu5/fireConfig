@@ -26,7 +26,7 @@ mapper:
 redis:
   host: 43.142.35.71
   port: 6379
-  password: 123456
+  password: skin-blue:123456
   turing-key: xx288&^^%$!@#4dc
   turing-iv: 0123456789abcdef
 # 配置swagger
