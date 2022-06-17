@@ -27,8 +27,8 @@ spring:
   redis:
     host: 43.142.35.71
     port: 6379
-    password: root
-    database: 123456
+    password: 123456
+    database: 0
   elasticsearch:
     cluster-name: cluster01
     cluster-nodes: 43.142.35.71:9200

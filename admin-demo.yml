@@ -23,6 +23,7 @@ redis:
     maxWait: 1000
   host: 43.142.35.71
   port: 6379
+  password: 123456
   timeout: 2000
   # 服务或应用名
   sysName: turing-admin
