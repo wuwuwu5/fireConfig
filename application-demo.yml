@@ -25,23 +25,23 @@ spring:
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
   redis:
-    host: 47.96.118.225
+    host: 43.142.35.71
     port: 6379
     password: root
     database: 0
   elasticsearch:
     cluster-name: cluster01
-    cluster-nodes: 47.96.118.225:9200
+    cluster-nodes: 43.142.35.71:9200
     rest:
       username: esuser
       password: Itat@pros
       uris:
-        - http://47.96.118.225:9200
+        - http://43.142.35.71:9200
 
 
 
   rabbitmq:
-    host: 47.96.118.225
+    host: 43.142.35.71
     port: 5672
     username: root
     password: root

@@ -1,4 +1,4 @@
-socketIP: 47.96.118.225
+socketIP: 43.142.35.71
 socketPort: 3722
 #消防主机socket端口
 socketPort1: 3733
@@ -28,7 +28,7 @@ spring:
 #      client:
 #        prefer-ip: true
   redis:
-    host: 47.96.118.225
+    host: 43.142.35.71
     port: 6379
     database: 0
   rabbitmq:
@@ -45,9 +45,9 @@ spring:
       username: esuser
       password: Itat@pros
       uris:
-        - http://47.96.118.225:9200  
+        - http://43.142.35.71:9200
   datasource:
-    url: jdbc:mysql://47.96.118.225:3306/turing-device?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://43.142.35.71:3306/turing-device?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
     druid:
       stat-view-servlet:
         loginUsername: root

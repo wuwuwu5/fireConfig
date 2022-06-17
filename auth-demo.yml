@@ -11,7 +11,7 @@ spring:
         name: turing-auth
     datasource:
       driverClassName: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://47.96.118.225:3306/turing-auth?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+      url: jdbc:mysql://43.142.35.71:3306/turing-auth?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
       druid:
         stat-view-servlet:
           loginUsername: root
@@ -24,7 +24,7 @@ mapper:
   mappers: cn.turing.firecontrol.common.mapper.CommonMapper
 
 redis:
-  host: 47.96.118.225
+  host: 43.142.35.71
   port: 6379
   turing-key: xx288&^^%$!@#4dc
   turing-iv: 0123456789abcdef

@@ -9,7 +9,7 @@ spring:
   application:
     name: turing-datahandler
   datasource:
-    url: jdbc:mysql://47.96.118.225:3306/turing-datahandler?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://43.142.35.71:3306/turing-datahandler?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
     druid:
       stat-view-servlet:
         loginUsername: root
@@ -22,7 +22,7 @@ spring:
       username: esuser
       password: Itat@pros
       uris:
-        - http://47.96.118.225:9200  
+        - http://43.142.35.71:9200
 # 配置数据库
 mybatis:
   basepackage: cn.turing.firecontrol.datahandler.mapper

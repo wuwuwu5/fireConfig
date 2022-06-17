@@ -5,7 +5,7 @@ spring:
     name: turing-admin
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.96.118.225:3306/turing-admin?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://43.142.35.71:3306/turing-admin?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
     username: root
     password: 123456
 mybatis:
@@ -21,7 +21,7 @@ redis:
     maxActive: 300
     maxIdle: 100
     maxWait: 1000
-  host: 47.96.118.225
+  host: 43.142.35.71
   port: 6379
   timeout: 2000
   # 服务或应用名
