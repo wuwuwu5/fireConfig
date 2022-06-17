@@ -32,10 +32,11 @@ spring:
     port: 6379
     database: 0
   rabbitmq:
-    host: 192.168.19.130
+    host: 43.142.35.71
     port: 5672
-    username: root
-    password: Admin001
+    username: guest
+    password: guest
+    dynamic: true
     virtual-host: /
   elasticsearch: #ES中系统变量 # Elasticsearch 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
     cluster-name: my-application
