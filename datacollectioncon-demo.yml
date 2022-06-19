@@ -1,4 +1,4 @@
-socketIP: 43.142.35.71
+socketIP: 127.0.0.1
 socketPort: 3722
 #消防主机socket端口
 socketPort1: 3733
@@ -46,13 +46,13 @@ spring:
       username: esuser
       password: Itat@pros
       uris:
-        - http://43.142.35.71:9200
+        - http://127.0.0.1:9200
   datasource:
     url: jdbc:mysql://43.142.35.71:3306/turing-device?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
     druid:
       stat-view-servlet:
         loginUsername: root
-        loginPassword: Itat@pro
+        loginPassword: 123456
 
 
 
