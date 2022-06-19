@@ -22,7 +22,7 @@ spring:
       username: esuser
       password: Itat@pros
       uris:
-        - http://43.142.35.71:9201
+        - http://127.0.0.1:9201
 # 配置数据库
 mybatis:
   basepackage: cn.turing.firecontrol.datahandler.mapper
