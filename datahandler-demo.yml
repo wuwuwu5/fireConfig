@@ -14,15 +14,16 @@ spring:
       stat-view-servlet:
         loginUsername: root
         loginPassword: 123456
-  elasticsearch: #ES中系统变量 # Elasticsearch 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
-    cluster-name: my-application
-    cluster-nodes: 127.0.0.1:9601,127.0.0.1:9602,127.0.0.1:9603
-    pool-size: 5
-    rest:
-      username: esuser
-      password: Itat@pros
-      uris:
-        - http://127.0.0.1:9201
+  data:
+    elasticsearch: #ES中系统变量 # Elasticsearch 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
+      cluster-name: my-application
+      cluster-nodes: 127.0.0.1:9601,127.0.0.1:9602,127.0.0.1:9603
+      pool-size: 5
+      rest:
+        username: esuser
+        password: Itat@pros
+        uris:
+          - http://127.0.0.1:9201
 # 配置数据库
 mybatis:
   basepackage: cn.turing.firecontrol.datahandler.mapper
