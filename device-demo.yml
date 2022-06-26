@@ -58,8 +58,8 @@ spring:
           
   druid:
     stat-view-servlet:
-    loginUsername: root
-    loginPassword: 123456
+      loginUsername: root
+      loginPassword: 123456
 
 
 #配置数据库
