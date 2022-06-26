@@ -1,61 +1,46 @@
 logging:
-  level:
-    #       tk.mybatis: INFO
-    cn.turing.firecontrol: DEBUG
+    level:
+#       tk.mybatis: INFO
+        cn.turing.firecontrol: DEBUG
 server:
-  port: 2222
+    port: 2222
 
 spring:
-  application:
-    name: turing-device
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-    default-property-inclusion: non_null
+    application:
+      name: turing-device
+    jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+      default-property-inclusion: non_null
   #  boot:
   #    admin:
   #      url: http://192.168.0.22:8766
   #      client:
   #        prefer-ip: true
-  redis:
-    host: 43.142.35.71
-    port: 6379
-    password: 123456
-    database: 0
-    maxIdle: 100  # 最小链接池数量
-    max-active: 300  # 最大连接池数量（缺省值：8）
-    max-wait: 10000
-  rabbitmq:
-    host: 43.142.35.71
-    port: 5672
-    username: root
-    password: 123456
-    dynamic: true
-    virtual-host: /
-  elasticsearch:
-    cluster-name: my-application
-    cluster-nodes: 127.0.0.1:9601,127.0.0.1:9602,127.0.0.1:9603
-    rest:
-      username: esuser
-      password: Itat@pros
-      uris:
-        - http://127.0.0.1:9201
-  #datasource:
-    #dynamic:
-      #primary: master
-      #strict: false
-      #datasource:
-        #master:
-          #url: jdbc:mysql://43.142.35.71:17717/turing-device?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
-          #username: root
-          #password: 123456
-          #driver-class-name: com.mysql.jdbc.Driver
-        #slave:
-          #url: jdbc:mysql://43.142.35.71:17718/turing-device?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
-          #username: root
-          #password: 123456
-          #driver-class-name: com.mysql.jdbc.Driver
-  datasource:
+    redis:
+      host: 43.142.35.71
+      port: 6379
+      password: 123456
+      database: 0
+      maxIdle: 100  # 最小链接池数量
+      max-active: 300  # 最大连接池数量（缺省值：8）
+      max-wait: 10000
+    rabbitmq:
+      host: 43.142.35.71
+      port: 5672
+      username: root
+      password: 123456
+      dynamic: true
+      virtual-host: /
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 127.0.0.1:9601,127.0.0.1:9602,127.0.0.1:9603
+      rest:
+        username: esuser
+        password: Itat@pros
+        uris:
+          - http://127.0.0.1:9201
+    datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://43.142.35.71:3306/turing-device?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
       username: root
@@ -65,31 +50,32 @@ spring:
       max-active: 20
         # 最大连接池数量（缺省值：8）
       max-wait: 60000
-        # 获取连接时最大等待时间，单位毫秒。        
-  druid:
-    stat-view-servlet:
-      loginUsername: root
-      loginPassword: 123456
+        # 获取连接时最大等待时间，单位毫秒。
+
+      druid:
+        stat-view-servlet:
+          loginUsername: root
+          loginPassword: 123456
 
 
 #配置数据库
 mybatis:
-  basepackage: cn.turing.firecontrol.device.mapper
-  xmlLocation: classpath:mapper/**/*.xml
-  mapper-locations: "classpath*:mapper/*.xml"
-  configuration:
-    cache-enabled: false
-    map-underscore-to-camel-case: true
+    basepackage: cn.turing.firecontrol.device.mapper
+    xmlLocation: classpath:mapper/**/*.xml
+    mapper-locations: "classpath*:mapper/*.xml"
+    configuration:
+      cache-enabled: false
+      map-underscore-to-camel-case: true
 
 # 配置swagger
 swagger:
-  enabled: true
-  base-package: cn.turing.firecontrol.device
-  title: 消防大数据
-  version: 1.0.0.SNAPSHOT
-  description: 设备管理服务
-  contact:
-    name: 北京维数科技有限公司
+    enabled: true
+    base-package: cn.turing.firecontrol.device
+    title: 消防大数据
+    version: 1.0.0.SNAPSHOT
+    description: 设备管理服务
+    contact:
+        name: 北京维数科技有限公司
 #    global-operation-parameters[0]:
 #            name: Authorization
 #            description: access_token
