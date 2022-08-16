@@ -9,21 +9,19 @@ spring:
   application:
     name: turing-datahandler
   datasource:
-    url: jdbc:mysql://43.142.35.71:3306/turing-datahandler?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://101.42.141.16:3306/turing-datahandler?characterEncoding=utf8&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
     druid:
       stat-view-servlet:
         loginUsername: root
-        loginPassword: 123456
+        loginPassword: wujian123
   data:
     elasticsearch: #ES中系统变量 # Elasticsearch 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
-      cluster-name: my-application
-      cluster-nodes: 127.0.0.1:9601,127.0.0.1:9602,127.0.0.1:9603
-      pool-size: 5
+      cluster-name: firenet-elasticsearch
+      cluster-nodes: 127.0.0.1:9300
       rest:
-        username: esuser
-        password: Itat@pros
-        uris:
-          - http://127.0.0.1:9201
+        uris: 127.0.0.1:9300
+        connection-timeout: 1s
+        read-timeout: 30s
 # 配置数据库
 mybatis:
   basepackage: cn.turing.firecontrol.datahandler.mapper

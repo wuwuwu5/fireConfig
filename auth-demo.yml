@@ -11,11 +11,11 @@ spring:
         name: turing-auth
     datasource:
       driverClassName: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://43.142.35.71:3306/turing-auth?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+      url: jdbc:mysql://101.42.141.16:3306/turing-auth?characterEncoding=utf8&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
       druid:
         stat-view-servlet:
           loginUsername: root
-          loginPassword: 123456
+          loginPassword: wujian123
 mybatis:
     basepackage: cn.turing.firecontrol.auth.mapper
     xmlLocation: classpath:mapper/**/*.xml
@@ -24,9 +24,9 @@ mapper:
   mappers: cn.turing.firecontrol.common.mapper.CommonMapper
 
 redis:
-  host: 43.142.35.71
+  host: 127.0.0.1
   port: 6379
-  password: 123456
+  password:
   turing-key: xx288&^^%$!@#4dc
   turing-iv: 0123456789abcdef
 # 配置swagger

@@ -5,9 +5,9 @@ spring:
     name: turing-admin
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://43.142.35.71:3306/turing-admin?characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://101.42.141.16:3306/turing-admin?characterEncoding=utf8&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
     username: root
-    password: 123456
+    password: wujian123
 mybatis:
   basepackage: cn.turing.firecontrol.admin.mapper
   xmlLocation: classpath:mapper/**/*.xml
@@ -21,9 +21,9 @@ redis:
     maxActive: 300
     maxIdle: 100
     maxWait: 1000
-  host: 43.142.35.71
+  host: 127.0.0.1
   port: 6379
-  password: 123456
+  password:
   timeout: 2000
   # 服务或应用名
   sysName: turing-admin
